@@ -8,7 +8,7 @@ public class Contact {
     private String birthDate;
     private int age;
 
-    public Contact(String name, String phoneNumber, String birthDate, int age) {
+    public Contact(String name, String phoneNumber, String birthDate) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
@@ -21,25 +21,28 @@ public class Contact {
         this.birthDate = source.birthDate;
         this.age = source.age;
     }
-
     public String getName() {
-        return this.name;
+        return name;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getPhoneNumber() {
-        return this.phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {        
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getBirthDate() {
-        return this.birthDate;
     }
 
     public void setBirthDate(String birthDate) {
@@ -47,20 +50,15 @@ public class Contact {
         setAge(toAge(birthDate));
     }
 
-    public int getAge() {
-        return this.age;
-    }
-
     private void setAge(int age) {
         this.age = age;
     }
 
-    private int toAge(String birthDate) {
-        LocalDate lt = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        LocalDate local = LocalDate.now();
-        Period period = Period.between(lt, local);
+    public int toAge(String birthDate) {
+        LocalDate parsedBirthDate = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        LocalDate currentDate = LocalDate.now();
+        Period period = Period.between(parsedBirthDate, currentDate);
         return period.getYears();
-
     }
 
 }
