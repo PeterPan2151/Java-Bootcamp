@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
         // TODO: create cities ArrayList;
-        List<String> cities = new ArrayList<>();
+        List<String> cities = new LinkedList<>();
         cities.add("Paris");
         cities.add("Florence");
         cities.add("Venice");
