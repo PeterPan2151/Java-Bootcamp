@@ -1,11 +1,11 @@
 public class BooleanComparisons {
     public static void main(String[] args) {
-        
+
         int chemistryGrade = 95;
         int biologyGrade = 75;
         System.out.println("Me: Hi Java, did I score better in biology?");
         System.out.println("Java: " + (biologyGrade > chemistryGrade) + "\n");
-        
+
         double sales = 37.55;
         double costs = 5.55;
         System.out.println("Me: Hi Java, did we make money?");
@@ -35,17 +35,17 @@ public class BooleanComparisons {
         char bestGrade = 'A';
         System.out.println("Me: Hi Java, did I get the best possible grade?");
         System.out.println("Java: " + (myGrade == bestGrade) + "\n");
-        
+
         int phoneNumber = 5551234;
         int contactNumber = 5551234;
         System.out.println("Me: Hi Java, is this the correct phone number for my contact?");
         System.out.println("Java: " + (phoneNumber == contactNumber) + "\n");
-        
+
         char letter1 = 'a';
         char letter2 = 'b';
         System.out.println("Me: Hi Java, are these two letters different?");
         System.out.println("Java: " + (letter1 != letter2) + "\n");
-        
+
         long distance1 = 1000L;
         long distance2 = 500L;
         System.out.println("Me: Hi Java, are these two distances not equal?");
@@ -57,13 +57,11 @@ public class BooleanComparisons {
         System.out.println("Me: Are the two words the same?");
         System.out.println("Java: " + (word.equals(secondWord)) + "\n");
 
-
         String thirdWord = "hello";
         String fourthWord = "goodbye";
 
         System.out.println("Me: Are the two words different");
-        System.out.println("Java: " + !(thirdWord.equals(fourthWord)) + "\n");
-
+        System.out.println("Java: " + (!thirdWord.equals(fourthWord)) + "\n");
 
     }
 }
