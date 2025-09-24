@@ -1,7 +1,7 @@
 public class Person {
     String name;
     String nationality;
-    String dateOfBrith;
+    String dateOfBirth;
     String[] passport;
     int seatNumber;
 }
