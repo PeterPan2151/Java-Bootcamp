@@ -1,10 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Car nissan = new Car("Nissan", 10000, 2020, "Green");
-        Car nissan2 = new Car(nissan);
-        Car dodge = new Car("Dodge", 11000, 2019, "Blue");
-        nissan2.setColor("Yellow");
+        Car[] cars = new Car[] {
+                new Car("Nissan", 5000, 2020, "red", new String[] { "tires", "keys" }),
+                new Car("Dodge", 8500, 2019, "blue", new String[] { "tires", "keys" }),
+                new Car("Nissan", 5000, 2017, "yellow", new String[] { "tires", "filter" }),
+                new Car("Honda", 7000, 2019, "orange", new String[] { "tires", "filter" }),
+                new Car("Mercedes", 12000, 2015, "jet black", new String[] { "tires", "filter", "transmission" })
+        };
 
-        nissan2.drive();
+        Dealership dealership = new Dealership(cars);
     }
 }
