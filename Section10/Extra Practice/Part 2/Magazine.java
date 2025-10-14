@@ -11,6 +11,13 @@ public class Magazine {
         setPublicationYear(publicationYear);
     }
 
+    public Magazine(Magazine source) {
+        setTitle(source.title);
+        setPublisher(source.publisher);
+        setIssueNumber(source.issueNumber);
+        setPublicationYear(source.publicationYear);
+    }
+
     public String getTitle() {
         return this.title;
     }
@@ -47,7 +54,6 @@ public class Magazine {
     public int getPublicationYear() {
         return this.publicationYear;
     }
-
 
     public void setPublicationYear(int publicationYear) {
         if (publicationYear <= 0) {
