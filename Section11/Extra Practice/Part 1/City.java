@@ -1,0 +1,50 @@
+public class City {
+    private String name;
+    private String country;
+    private long population;
+
+    public City(String name, String country, long pop) {
+        setName(name);
+        setCountry(country);
+        setPopulation(pop);
+    }
+
+    public City(City source) {
+        setName(source.name);
+        setCountry(source.country);
+        setPopulation(source.population);
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Name cannot be null or blank");
+        }
+        this.name = name;
+    }
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    public void setCountry(String country) {
+        if (country == null || country.isBlank()) {
+            throw new IllegalArgumentException("Country cannot be null or blank");
+        }
+        this.country = country;
+    }
+
+    public long getPopulation() {
+        return this.population;
+    }
+
+    public void setPopulation(long pop) {
+        if (pop <= 0) {
+            throw new IllegalArgumentException("Population must be greater than 0");
+        }
+        this.population = pop;
+    }
+}
