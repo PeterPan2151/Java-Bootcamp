@@ -21,5 +21,6 @@ public class TDarrays {
         System.out.println("\tHarry: " + Arrays.toString(grades[0]));
         System.out.println("\tRon: " + Arrays.toString(grades[1]));
         System.out.println("\tHermione: " + Arrays.toString(grades[2]));
+        
     }
 }
