@@ -6,5 +6,7 @@ public class WholeNumbers {
 
         System.out.println("The global population is " + globalPopulation);
         System.out.println("Daily there are " + dailyGoogleSearches + " Google searches");
+
+        //Test
     }
 }
