@@ -1,121 +1,87 @@
 public class SwitchStatements {
     public static void main(String[] args) {
-
         String weather = "sunny";
         switch (weather) {
             case "sunny":
-                System.out.println("You can wear a shirt");
-                break;
-            case "rainy":
-                System.out.println("You should wear a raincoat");
+                System.out.println("Wear a shirt");
                 break;
             case "cloudy":
-                System.out.println("You should wear a sweater");
+                System.out.println("Wear a sweather");
+                break;
+            case "rainy":
+                System.out.println("Wear a raincoat");
                 break;
             case "snowy":
-                System.out.println("You should wear a jacket");
+                System.out.println("Wear a jacket");
                 break;
-        
             default:
-                System.out.println("You can wear what you want");
+                System.out.println("You're good");
                 break;
         }
+
         int role = 2;
-        // Determine user access level based on the role (e.g., 1: admin, 2: editor, 3: user)
-        // Decide whether to use if-else or switch
         switch (role) {
             case 1:
-                System.out.println("You are an admin");
+                System.out.println("CEO");
                 break;
-            
-            case 2: 
-                System.out.println("You are an editor");
+            case 2:
+                System.out.println("Admin");
                 break;
             case 3:
-                System.out.println("You are a user");
+                System.out.println("Manager");
                 break;
-        
             default:
-                System.out.println("PLease contact HR");
+                System.out.println("Employee");
                 break;
         }
 
         int temperature = 75;
         int humidity = 65;
-        
         if (temperature >= 80 && humidity >= 60) {
-            System.out.println("It's too hot and humid");
-        } else if(temperature >= 80) {
-            System.out.println("It's too hot");
+            System.out.println("Its to hot and humid");
+        } else if (temperature >= 80) {
+            System.out.println("Its to hot");
         } else if (temperature <= 60 && humidity >= 60) {
-            System.out.println("It's too cold and humid");
+            System.out.println("its to cold and humid");
         } else if (temperature <= 60) {
-            System.out.println("It's too cold");
+            System.out.println("Its too cold");
         } else {
-            System.out.println("It's confortable");
+            System.out.println("Its okay");
         }
 
-     
         int age = 25;
         int income = 50000;
-        
-        if (age >= 18 && age <= 60 && income <= 30000){
-            System.out.println("Your eligible");
-        } else {
-            System.out.println("You are not eligible");
-        }
-
-        String lightColor = "green";
-
-        switch (lightColor) {
-            case "green":
-                System.out.println("Go"); 
-                break;
-            case "red":
-                System.out.println("Stop");
-                break;
-            case "yellow":
-                System.out.println("slow down");
-                break;
-        
-            default:
-                break;
-        }
-
-        
-        int grade = 85;
-    
-        if (grade >= 90) {
-            System.out.println("You got an A");
-        } else if (grade >= 80) {
-            System.out.println("You got a B");
-        } else if (grade >= 70) {
-            System.out.println("You got a C");
-        } else if (grade >= 60) {
-            System.out.println("You got a D");
-        } else {
-            System.out.println("You got a F");
-        }
-
-        // Section 3: Browser type
-        String browser = "Chrome";
-        // Check if the browser is one of the following: Chrome, Firefox, Safari, Edge, or Opera
+        // Determine eligibility for a specific credit card based on age and income
         // Decide whether to use if-else or switch
+
+        // Section 1: Traffic light colors
+        String lightColor = "green";
+        // Determine what action to take based on the traffic light color (e.g., green,
+        // yellow, red)
+        // Decide whether to use if-else or switch
+
+        // Section 2: Exam grade
+        int grade = 85;
+        // Determine the letter grade based on the numeric grade (e.g., A, B, C, D, F)
+        // Decide whether to use if-else or switch
+
+        String browser = "Chrome";
         switch (browser) {
             case "Chrome":
-                System.out.println("Enjoy your chrome extensions");
+                System.out.println("Nice");
                 break;
             case "Firefox":
-                System.out.println("The best non profit browser");
+                System.out.println("Cool browser");
                 break;
             case "Safari":
-                System.out.println("Apple user");
+                System.out.println("You must use an apple product");
+                break;
+            case "Edge":
+                System.out.println("Old browser");
+                break;
             default:
-                System.out.println("Weird browser");
+                System.out.println("What browser do you use?");
                 break;
         }
-        
-        
-
     }
 }
