@@ -51,19 +51,37 @@ public class SwitchStatements {
 
         int age = 25;
         int income = 50000;
-        // Determine eligibility for a specific credit card based on age and income
-        // Decide whether to use if-else or switch
+        if (age >= 18 && age <= 60 && income >= 30000) {
+            System.out.println("Congratulations, you are eliglbe for the credit card");
+        } else {
+            System.out.println("Sorry, you are not elegible for the credit card");
+        }
 
-        // Section 1: Traffic light colors
         String lightColor = "green";
-        // Determine what action to take based on the traffic light color (e.g., green,
-        // yellow, red)
-        // Decide whether to use if-else or switch
+        switch (lightColor) {
+            case "green":
+                System.out.println("Go");
+                break;
+            case "yellow":
+                System.out.println("Slow Down");
+                break;
+            case "red":
+                System.out.println("STOP");
+                break;
+        }
 
-        // Section 2: Exam grade
         int grade = 85;
-        // Determine the letter grade based on the numeric grade (e.g., A, B, C, D, F)
-        // Decide whether to use if-else or switch
+        if (grade >= 80) {
+            System.out.println("You got an A!");
+        } else if (grade >= 70) {
+            System.out.println("You got a B!");
+        } else if (grade >= 60) {
+            System.out.println("You got a C.");
+        } else if (grade >= 50) {
+            System.out.println("You got a D.");
+        } else {
+            System.out.println("You failed :(");
+        }
 
         String browser = "Chrome";
         switch (browser) {
