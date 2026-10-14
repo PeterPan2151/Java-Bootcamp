@@ -1,46 +1,49 @@
 public class ReturnValues {
     public static void main(String[] args) {
-        double area1 = calculateArea(2.3, 3.5);
-        double area2 = calculateArea(1.6, 2.4);
-        double area3 = calculateArea(2.6, 4.3);
-        
-        printArea(2.3, 3.5, area1);
-        printArea(1.6, 2.4, area2);
-        printArea(2.6, 4.3, area3);
+        System.out.println("Area: " + calculateArea(2.3, 3.5));
+        printArea(2.3, 3.6);
+        // printArea(0, 0);
+        // System.out.println("Area: " + calculateArea(1.6, 2.4));
+        // System.out.println("Area: " + calculateArea(2.6, 4.3));
+        // System.out.println("Area: " + calculateArea(2.6, -4.3));
 
-        String englishExplanation = explainArea("English");
-        String spanishExplanation = explainArea("Spanish");
-        String frenchExplanation = explainArea("French");
-        String otherExplanation = explainArea("Italian");
+        String englishExplanation = explainArea("english");
+        String spanishExplanation = explainArea("spanish");
+        String frenchExplanation = explainArea("french");
+        String germanExplanation = explainArea("german");
 
         System.out.println(englishExplanation);
         System.out.println(spanishExplanation);
         System.out.println(frenchExplanation);
-        System.out.println(otherExplanation);
-        
+        System.out.println(germanExplanation);
     }
+
 
     public static double calculateArea(double length, double width) {
-        double area = length * width;
-        return area;
+        if (length < 0 || width < 0) {
+            System.out.println("Invalid dimension");
+            System.exit(0);
+        }
+        return length * width;
     }
 
-    public static String explainArea(String language) {
 
+    public static String explainArea(String language) {
         switch (language) {
-            case "English":
-                return "Area equals length * width";
-            case "French":
-                return "La surface est egale a la longueur * la largeur";
-            case "Spanish":
-                return "area es igual a largo * ancho";
+            case "english":
+                return "English \"Area equals length * width\"";
+            case "spanish":
+                return "Spanish \"area es igual a largo * ancho\"";
+            case "french":
+                return "French \"La surface est egale a la longueur * la largeur\"";
             default:
-            return "Language not available";
+                return "Language not valid";
         }
     }
 
-    public static void printArea(double length, double width, double area){
-        System.out.println("A rectangle with a leghth of " + length + " and a width of " + width + " has an area of " + area);
 
+    public static void printArea(double length, double width) {
+        double area = calculateArea(length, width);
+        System.out.println("A rectangle with a length of " + length + " and a width of " + width + " has an area of " + area);
     }
 }
