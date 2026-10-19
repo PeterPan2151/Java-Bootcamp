@@ -9,7 +9,7 @@ public class BuiltInFunctions {
          * @param message (String)
          */
         String message = "Hello, World!";
-        // Write your code here
+        System.out.println(message);
 
 
         /**
@@ -19,7 +19,7 @@ public class BuiltInFunctions {
          * @return length (int)
          */
         String example = "Java";
-        // Write your code here
+        System.out.println(example.length());
 
 
         /**
@@ -29,7 +29,7 @@ public class BuiltInFunctions {
          * @return lowerCase (String)
          */
         String upperCase = "JAVA";
-        // Write your code here
+        System.out.println(upperCase.toLowerCase());
 
 
         /**
@@ -40,7 +40,7 @@ public class BuiltInFunctions {
          * @return startsWithPrefix (boolean)
          */
         String programming = "Java programming";
-        // Write your code here
+        System.out.println(programming.startsWith("Jav"));
 
 
 
@@ -53,7 +53,7 @@ public class BuiltInFunctions {
          * @return replacedString (String)
          */
         String original = "Java is fun!";
-        // Write your code here
+        System.out.println(original.replace('a', 'o'));
 
         
         /**
@@ -65,7 +65,7 @@ public class BuiltInFunctions {
          */
         
         double number = 9;
-        // Write your code here
+        System.out.println(Math.sqrt(number));
 
 
         /**
@@ -78,7 +78,7 @@ public class BuiltInFunctions {
          */
         double base = 2;
         double exponent = 3;
-        // Write your code here
+        System.out.println(Math.pow(base, exponent));
 
 
         /**
@@ -87,7 +87,7 @@ public class BuiltInFunctions {
          * Find a built-in function that generates a random number between 0.0 (inclusive) and 1.0 (exclusive).
          * @return randomNumber (double)
          */
-        // Write your code here
+        System.out.println(Math.random());
 
 
 
@@ -101,8 +101,7 @@ public class BuiltInFunctions {
          */
         int number1 = 5;
         int number2 = 10;
-        // Write your code here
-
+        System.out.println(Math.max(number1, number2));
 
     }
 }

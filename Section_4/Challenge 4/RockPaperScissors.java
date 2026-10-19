@@ -10,28 +10,33 @@ public class RockPaperScissors {
         System.out.println("Are you ready? Write 'yes' if you are.");
 
     //Task 1: See if the user wants to play. 
+        String wantsToPlay = scan.nextLine();
+        if (wantsToPlay.equals("yes")) {
+            System.out.println("Great!");
+
+            System.out.println("rock - paper - scissors, shoot!");
+            String userChoice = scan.nextLine();
+
+            if (validChoice(userChoice)) {
+                String comChioce = computerChoice();
+            }
+
+        } else {
+            System.out.println("Darn, some other time...!  ");
+        }
 
     /*Task 2: Set up the game
     
 
        • if the answer is yes: 
-             – print: Great!
-             – print: rock - paper - scissors, shoot!
-             – pick up user's choice.
-             – get the computer choice (can only be done after task 3).
              – get the result (can only be done after task 4)
-             – print everything (can only be done after task 5).
-
-       • else:
-             – print: Darn, some other time...!        
+             – print everything (can only be done after task 5).     
     */
               
 
         scan.close();
     }
 
-
-    //Task 3  – Write a function where the computer picks a random choice.
 
     /**
      * Function name: computerChoice - picks randomly between rock paper and scissors
@@ -43,6 +48,19 @@ public class RockPaperScissors {
      *      if 1: returns the choice 'paper'
      *      if 2: returns the choice 'scissors'
      */
+    public static String computerChoice() {
+        int choice = (int) (Math.random() * 3);
+        switch (choice) {
+            case 1:
+                return "rock";
+            case 2:
+                return "paper";
+            case 3:
+                return "scissors";
+            default:
+                return "";
+        }
+    }
 
 
 
@@ -76,10 +94,19 @@ public class RockPaperScissors {
      *
      *
      */
-
     public static String result(String yourChoice, String computerChoice) {
         String result = "";
-
+        switch (yourChoice) {
+            case "rock":
+                break;
+            case "paper":
+                break;
+            case "scissors":
+                break;
+            default:
+                System.out.println("Invalid choice");
+                System.exit(0);
+        }
         return result;
       }
  
@@ -98,5 +125,18 @@ public class RockPaperScissors {
      *      – prints: The computer chose: <computer choice>
      *      – prints: <result>
      */
+
+    
+    /**
+     * Function name: validChoice
+     * 
+     * 
+     * 
+     * @param choice (string)
+     * @return choice (String)
+     */
+    public static boolean validChoice(String choice) {
+        return (choice.equals("rock") || choice.equals("paper") || choice.equals("scissors"));
+    }
 
 }
