@@ -8,21 +8,19 @@ public class SignIn {
         Scanner scan = new Scanner(System.in);
         System.out.println("\nWelcome to Javagram! Sign in below\n");
         System.out.print("- Username: ");
-        String enteredUsername = scan.nextLine();
+        String inputUser = scan.nextLine();
         System.out.print("- Password: ");
-        String enteredPassword = scan.nextLine();
+        String inputPassword = scan.nextLine();
 
-        while (!enteredPassword.equals(password) || !enteredUsername.equals(username)) {
+        while (!inputUser.equals(username) || !inputPassword.equals(password)) {
             System.out.println("\nIncorrect, please try again!\n");
             System.out.print("- Username: ");
-            enteredUsername = scan.nextLine();
+            inputUser = scan.nextLine();
             System.out.print("- Password: ");
-            enteredPassword = scan.nextLine();
-            
+            inputPassword = scan.nextLine();
         }
-        System.out.println("Sign in succesfull. Welcome");
 
+        System.out.println("Sign in succesful. Welcome!");
         scan.close();
-        
     }
 }
