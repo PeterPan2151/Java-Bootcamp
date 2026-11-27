@@ -63,7 +63,7 @@ public class Car {
         this.parts = Arrays.copyOf(parts, parts.length);
     }
 
-    public void Drive() {
+    public void drive() {
         System.out.println("Driving...");
     }
 
