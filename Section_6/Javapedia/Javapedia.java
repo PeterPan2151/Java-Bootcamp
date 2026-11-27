@@ -5,54 +5,59 @@ public class Javapedia {
         Scanner scan = new Scanner(System.in);
         System.out.println("\n**********Javapedia**********");
         System.out.println("How many historical figures will you register?");
-       
-        int numberHistoricalFigures = scan.nextInt();
-        String[][] database = new String[numberHistoricalFigures][3];
-        scan.nextLine(); 
+        int quanFigures = scan.nextInt();
+
+        String[][] figures = new String[quanFigures][3];
+        scan.nextLine();
         
-        for (int i = 0; i < database.length; i++) {
-            for (int j = 0; j < database[i].length; j++) {
-                System.out.println("\n\tFigure " + (i+1)); 
-                System.out.print("\t - Name: ");
-                database[i][0] = scan.nextLine();
+        for (int i = 0; i < figures.length; i++) {
+            System.out.println("\n\tFigure " + (i+1)); 
+            System.out.print("\t - Name: ");
+            String name = scan.nextLine();
 
-                System.out.print("\t - Date of birth: ");
-                database[i][1] = scan.nextLine();
+            System.out.print("\t - Date of birth: ");
+            String dob = scan.nextLine();
 
-                System.out.print("\t - Occupation: ");
-                database[i][2] = scan.nextLine();
+            System.out.print("\t - Occupation: ");
+            String occupation = scan.nextLine();
 
-                System.out.print("\n");
+            figures[i][0] = name;
+            figures[i][1] = dob;
+            figures[i][2] = occupation;
 
+            System.out.print("\n");
+        }
+        
+        System.out.println("These are the values you stored:"); 
+        print2DArray(figures);
+
+        System.out.print("\nWho do you want information on? ");  
+        String findName = scan.nextLine();
+    
+        for (int i = 0; i < figures.length; i++) {
+            if (figures[i][0].equals(findName)) {
+                System.out.println("\tName: " + figures[i][0]);
+                System.out.println("\tName: " + figures[i][1]);
+                System.out.println("\tName: " + figures[i][2]);
             }
         }
-         
-      
-        System.out.println("These are the values you stored:"); 
-        print2DArray(database);
-
-        System.out.print("\nWho do you want information on? ");
-        String search = scan.nextLine();
-        for (int i = 0; i < database.length; i++) {
-            if (search.equals(database[i][0])) {
-                System.out.print("\tName: " + database[i][0]);
-                System.out.print("\tDate of birth: " + database[i][1]);
-                System.out.print("\tOccupation: " + database[i][2]);
-                break;
-            }  
-        }  
-        
-
         scan.close();
     }
 
-
+    /**
+     * Function name: print2DArray
+     * @param array (String[][])
+     * 
+     * Inside the function
+     *  1. print the database
+     *     • a tab of space precedes each row.
+     *     • each value in database has one space from the other value. 
+     *     • print a new line.
+     */
     public static void print2DArray(String[][] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print("\t" + array[i][j] + " ");
-            }
-            System.out.println();
+            System.out.println("\t" + array[i][0] + " " + array[i][1] + " " + array[i][2] + " ");
         }
     }
+
 }

@@ -1,5 +1,5 @@
 public class Person {
-    
+
     private String name;
     private String nationality;
     private String dateOfBirth;
@@ -29,20 +29,20 @@ public class Person {
         this.nationality = nationality;
     }
 
-    public String getDateofBirth() {
+    public String getDateOfBirth() {
         return this.dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth){
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public int getSeatNumber(){
+    public int getSeatNumber() {
         return this.seatNumber;
     }
 
     public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
     }
- 
+
 }

@@ -1,5 +1,5 @@
 public class Person {
-    
+
     private String name;
     private String nationality;
     private String dateOfBirth;
@@ -52,5 +52,4 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
- 
 }

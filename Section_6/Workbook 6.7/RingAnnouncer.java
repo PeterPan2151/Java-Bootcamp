@@ -5,9 +5,9 @@ public class RingAnnouncer {
         int losses = 0;
         
         for (int i = 0; i < record.length; i++) {
-            if (record[i].equals("WIN")){
+            if (record[i].equals("WIN")) {
                 wins++;
-            } else if (record[i].equals("LOSS")){
+            } else if (record[i].equals("LOSS")) {
                 losses++;
             }
         }

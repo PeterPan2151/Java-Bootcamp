@@ -73,13 +73,5 @@ public class Person {
         seatNumber = ((int) (Math.random() * 11 + 1));
     }
 
-    public String toString() {
-        return "Name: " + this.name + "\n" +
-        "Nationality: " + this.nationality + "\n" +
-        "Date of Birth: " + this.dateOfBirth + "\n" + 
-        "Seat Number: " + this.seatNumber + "\n" + 
-        "Passport: " + Arrays.toString(this.passport) + "\n";
-    }
-
  
 }

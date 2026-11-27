@@ -6,7 +6,7 @@ public class TicTacToe {
 
   public static void main(String[] args) {
 
-    System.out.println("Let's play tic tac toe");
+    System.out.println("\nLet's play tic tac toe");
 
     char[][] board = {
         { '_', '_', '_' },
@@ -30,46 +30,51 @@ public class TicTacToe {
 
       int count = checkWin(board);
       if (count == 3) {
-        System.out.println("X wins");
+        System.out.println("X WINS!");
         break;
       } else if (count == -3) {
-        System.out.println("O wins");
+        System.out.println("O WINS!");
         break;
+      } else if (i == 8) {
+        System.out.println("IT'S A TIE!");
       }
+
     }
 
     scan.close();
   }
 
   public static void printBoard(char[][] board) {
-    System.out.println();
+    System.out.print("\n");
     for (int i = 0; i < board.length; i++) {
       System.out.print("\t");
       for (int j = 0; j < board[i].length; j++) {
         System.out.print(board[i][j] + " ");
       }
-      System.out.println("\n\n");
+      System.out.print("\n\n");
     }
   }
 
   public static int[] askUser(char[][] board) {
-    System.out.println("Enter a row and a column: ");
+    System.out.print(" - pick a row and column number: ");
     int row = scan.nextInt();
-    int column = scan.nextInt();
-
-    while (board[row][column] == 'X' || board[row][column] == 'O') {
-      System.out.println("Spot taken, try again");
-      System.out.println("Enter a row and a column: ");
+    int element = scan.nextInt();
+    while (board[row][element] != '_') {
+      System.out.print("Spot taken, try again: ");
       row = scan.nextInt();
-      column = scan.nextInt();
+      element = scan.nextInt();
     }
-    return new int[] { row, column };
+    return new int[] { row, element };
   }
 
   public static int checkWin(char[][] board) {
     int rows = checkRows(board);
+
+    // Math.abs returns the absolute value of a given number, removing any negative
+    // sign.
     if (Math.abs(rows) == 3)
-      return rows;
+      return rows; // If the block of code consists of only one line, you can omit the curly
+                   // braces.
 
     int columns = checkColumns(board);
     if (Math.abs(columns) == 3)
@@ -96,11 +101,12 @@ public class TicTacToe {
           count--;
         }
       }
-      if (count == 3 || count == -3) {
+      if (Math.abs(count) == 3) {
         return count;
       } else {
         count = 0;
       }
+
     }
     return count;
   }
@@ -115,11 +121,12 @@ public class TicTacToe {
           count--;
         }
       }
-      if (count == 3 || count == -3) {
+      if (Math.abs(count) == 3) {
         return count;
       } else {
         count = 0;
       }
+
     }
     return count;
   }
@@ -147,4 +154,5 @@ public class TicTacToe {
     }
     return count;
   }
+
 }
